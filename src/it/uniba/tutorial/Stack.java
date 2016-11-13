@@ -33,5 +33,4 @@ public class Stack<A> {
 			return false;
 	}
 	
-
 }
