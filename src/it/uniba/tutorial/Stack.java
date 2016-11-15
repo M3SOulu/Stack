@@ -24,7 +24,6 @@ public class Stack {
 		this.lifoList.pop();
 	}
 	
-	//TODO da implementare
 	public int peek() {
 		return -1;
 	}
