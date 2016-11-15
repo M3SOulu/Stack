@@ -1,6 +1,7 @@
 package it.uniba.tutorial;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 /**
  * Simulate a stack structure to perform storing data in LIFO  
@@ -28,34 +29,13 @@ public class Stack{
 	/**
 	 * pop the last item pushed in the stack
 	 */
-	public void pop() throws EmptyStackException{ 
-		
-		if(!isEmpty()){
-			
-			stack.removeFirst(); 
-			
-		}else{
-			
-			throw new EmptyStackException("illegal action!");
-		}
-		
-	}
+	public void pop() throws NoSuchElementException{ stack.removeFirst(); }
 	
 	/**
-	 * return the top of the satck
+	 * return the top of the stack
 	 * @return the first element of the stack, min integer value otherwise.
 	 */
-	public int peek() throws EmptyStackException{ 
-		
-		if(isEmpty()){
-			
-			throw new EmptyStackException();
-			
-		}
-		
-		return stack.getFirst();
-		
-	}
+	public int peek() throws NoSuchElementException{ return stack.getFirst();}
 	
 	/**
 	 * 
