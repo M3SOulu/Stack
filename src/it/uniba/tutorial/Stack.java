@@ -1,12 +1,40 @@
 package it.uniba.tutorial;
 
-public class Stack {
+import java.util.LinkedList;
+
+public class Stack<A> {
 	
-	public void push(int x) {}
-	public void pop(){}
-	public int peek(){ return -1;}
-	public int size(){ return -1;}
-	public boolean isEmpty() {return false;}
+	private LinkedList<A> a;
 	
+	public Stack(){
+		a = new LinkedList<A>();
+	}
+	
+	public void push(A x){
+		a.addFirst(x);
+	}
+	
+	public void pop(){
+		a.removeFirst();
+	}
+	
+	public A peek(){
+		return a.peekFirst();
+	}
+	
+	public int size(){
+		return a.size();
+	}
+	
+	public boolean isEmpty(){
+		boolean empty;
+		
+		if (a.size() == 0){
+			empty = true;
+		} else {
+			empty = false;
+		}
+		return empty;
+	}
 
 }
